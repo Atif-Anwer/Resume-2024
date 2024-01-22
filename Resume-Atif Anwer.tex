@@ -1,0 +1,298 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Maria Luiza Linhares Dantas
+%
+% This is an example of a very complete CV using the 'moderncv' package
+% and the 'timeline' package. For more information on those, please
+% access:
+% https://www.ctan.org/tex-archive/macros/latex/contrib/moderntimeline
+% https://www.ctan.org/tex-archive/macros/latex/contrib/moderncv
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt, a4paper, sans, final]{moderncv}
+% \usepackage[dvipsnames]{xcolor}
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry}    % Width of the entire CV
+\setlength{\hintscolumnwidth}{4.1cm} % Width of the timeline on your left
+\usepackage{pdfpages/pdfpages}
+\usepackage{moderntimeline/moderntimeline}
+\usepackage{xpatch/xpatch}
+\usepackage{color, graphicx}
+\tlmaxdates{2001}{2024}              % Beggining and start of your timeline
+
+\newcommand{\cvreferencecolumn}[2]{%
+  \cvitem[0.8em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+\newcommand{\cvreference}[8]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{\href{mailto:#6}{\nolinkurl{#6}}}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7\newline}
+    \ifthenelse{\equal{#8}{}}{}{\mobilephonesymbol~#8}}
+
+% List of journals that I may need to use in the bibtex file
+\def\aj{AJ}
+\def\araa{ARA\&A}
+\def\apj{ApJ}
+\def\apjl{ApJ}
+\def\apjs{ApJS}
+\def\apss{Ap\&SS}
+\def\aap{A\&A}
+\def\aapr{A\&A~Rev.}
+\def\aaps{A\&AS}
+\def\mnras{MNRAS}
+\def\pasp{PASP}
+\def\pasj{PASJ}
+\def\qjras{QJRAS}
+\def\nat{Nature}
+\def\aplett{Astrophys.~Lett.}
+\def\aas{AAS}
+\def\solphys{Solar Physics}
+\def\memsai{Mem.~Soc.~Astron.~Italiana}
+
+
+% Personal Information
+\name{Atif ANWER \newline}{}
+\title{\emph{Postdoctoral Researcher in Computer Vision}}
+\address{Le Creusot, 71200 France}{}
+\phone[mobile]{+33~(6)~6011~2563}
+% \phone[fixed]{+55~(11)~3091~2722}
+\email{atif.anwer@u-bourgogne.fr}                % optional, remove / comment the line if not wanted
+\homepage{atif-anwer.github.io}    % optional, remove / comment the line if not wanted
+%\social[linkedin]{https://br.linkedin.com/in/maria-luiza-linhares-dantas-56408033}  % optional, remove / comment the line if not wanted
+% \social[twitter]{mdastro}  % optional, remove / comment the line if not wanted
+\social[github]{Atif-Anwer}   % optional, remove / comment the line if not wanted
+% \extrainfo{\emailsymbol \emaillink{mdantas.astro@gmail.com}}
+% \quote{Dubitando ad veritatem parvenimus - \emph{Cicerone}}
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+
+
+\begin{document}
+
+\makecvtitle
+
+\section{Educational Background}
+
+\bigskip
+
+\tlcventry{2019}{2022}{PhD Computer Sciences / Electrical \& Electronics Engineering \emph{(Dual-Degree)}}{\newline INSA Rouen Normandie, France \& University Teknologi PETRONAS, Malaysia}{\emph{Funded by}: Agence Nationale de la Recherche (ANR) project ICUB}{\newline \emph{Supervisors}: Prof. Samia Ainouz (INSA), Asst. Prof. Naufal Bin Saad (UTP)}{\emph{Thesis}: Specular Highlight Detection and Adversarial Generation of Specularity-Free Images using Multi-Domain Translation Network Trained with Polarimetric Data}
+
+\bigskip
+
+\tlcventry{2016}{2017}{MSc Electrical \& Electronics Engineering}{\newline University Teknologi PETRONAS, Perak Malaysia}{}{\newline \emph{Supervisor}: Asst. Prof. Syed Saad Azhar Ali}{\emph{Thesis}: Real-time underwater 3D scene reconstruction using Kinect v2 time of flight camera}
+
+\bigskip
+
+\tlcventry{2001}{2004}{B.E. Mechatronics}{\newline Major: Robotics, Control Systems and Image processing, \newline National University of Sciences \& Technology (NUST), Pakistan}{}{\newline \emph{Supervisor}: Dr. Saeed Ur Rahman}{\emph{Thesis}: Development and control of Bipedal Autonomous Robot (BART)}
+
+\bigskip
+
+% \section{Theses}
+
+% \medskip
+
+% \subsection{\textbf{PhD Thesis}}
+
+% \cvitem{\emph{ }}{Specular Highlight Detection and Adversarial Generation of Specularity-Free Images using Multi-Domain Translation Network Trained with Polarimetric Data}
+% % \cvitem{\emph{ADVISORS}}{Prof Samia Ainouz, Prof Fabrice Meriaudeau, Asst. Prof. Naufal B Saad}
+% % \cvitem{\textbf{FUNDING AGENGY}}{ ICUB project 2017 ANR program: ANR-17-CE22-0011}
+
+% \bigskip
+
+% \subsection{\textbf{MSc Thesis}}
+
+% \cvitem{\emph{TITLE}}{Real-time underwater 3D scene reconstruction using Kinect v2 time of flight camera}
+% % \cvitem{\emph{ADVISORS}}{Asst. Prof. Syed Saad Azhar Ali, Prof Fabrice Meriaudeau}
+
+% \bigskip
+
+% \subsection{\textbf{BE Thesis}}
+
+% \cvitem{\emph{TITLE}}{Development and control of Bipedal Autonomous Robot (BART)}
+% % \cvitem{\emph{ADVISOR}}{Prof Saeed Ur Rahman}
+
+% \bigskip
+
+% \section{Research Projects}
+% \medskip
+% \subsection{\textbf{Undergraduate Research Project}}
+
+% \tlcventry{2007}{2009}{The Study of the HII Region G331.5-0.2 in the Radio Contiuum Through the Stellar Population Using the 2MASS Catalog}{}{}{}{}
+
+% \cvitem{\textbf{ADVISOR}}{Professor Zulema Abraham}
+% \cvitem{\textbf{FUNDING AGENGY}}{Conselho Nacional de Desenvolvimento Científico e Tecnológico \newline (hereafter CNPq)}
+% \bigskip
+
+\section{Research Interests}
+
+\cvitem{\textbf{\footnotesize{ }}}{
+    \begin{itemize}
+    \item 3D Human Pose Estimation applications
+    \item Generative AI applications
+    \item 3D Sensing and Robotic Perception
+    \item Semantic Segmentation and Scene Understanding
+    \item Mobile Robot design and development
+    \end{itemize}
+    }
+
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{publications}
+
+% \cvitem{\textbf{OTHERS}}{
+%     \begin{itemize}
+%     \item Astrostatistics
+%     \end{itemize}
+%     }
+
+
+% \section{Affiliations}
+% \subsection{Scientific}
+
+% \cvitem{\textbf{\footnotesize{BRAZIL}}}{Sociedade Astronômica Brasileira (hereafter \textbf{SAB}) \emph{(Brazilian Astronomical Society)} }
+
+% \cvitem{\textbf{\footnotesize{INTERNATIONAL ASSOCIATIONS}}}{International Astrostatistics Association (\textbf{IAA}), Cosmostatistics Initiative (\textbf{COIN}), Javalambre Physics of the Accelerating Universe (\textbf{J-PAS})}
+
+% \subsection{Other}
+% \cvitem{}{Overleaf Advisor (\url{https://www.overleaf.com/advisors})}
+% \cvitem{}{Zero Waste Bloggers Network, Inc. (non-profit organization) \newline (\url{http://zerowastebloggersnetwork.com})}
+\section{Professional Experience}
+\tlcventry{2022}{0}{Machine Learning R\&D Engineer}{Apeira Technologies}{Le Creusot, France}{}{Tasked with research and development of human post estimation and posture correction algorithms for improving cyclists’ performance.}
+\medskip
+\tlcventry{2022}{0}{Postdoctoral Researcher}{Université de Bourgogne}{Dijon, France}{}{Tasked with development of segmentation and classification techniques on OCT images for prediction of cardiovascular disease. \newline Development of software pipeline for end-to-end detection, segmentation, and analysis of Tunnelling Electron Microscopy (TEM) images of nanoparticles.}
+\medskip
+\tlcventry{2018}{2020}{Freelance 3D CAD \& Graphic Designer}{Freelancer.com}{}{}{Executed multiple 3D CAD modelling and graphic design projects from concept to prototype to completion.}
+\medskip
+\tlcventry{2015}{2016}{Co-Founder \& CTO}{Scifacterz}{Islamabad}{Pakistan}{Robotics Startup venture centred on design and  of “NBE (Non-Biological Entity)" an open-source, low cost, research platform and Home Service Robot}
+\medskip
+\tlcventry{2004}{2016}{Manager (Mechatronics)}{}{Islamabad}{Pakistan}{Multiple diverse industry roles involving concurrent responsibilities in Mechanical and Electronic Design research, and documentation.}
+
+\bigskip
+\bigskip
+\bigskip
+
+\section{Teaching Experience}
+\medskip
+% \subsection{Teaching Assistant}
+\tldatecventry{2023}{Masters Course (M2 Health AI)}{Image Processing}{University de Bourgogne}{Département IEM (Informatique Electronique Mécanique)}{University de Bourgogne, France}
+\tldatecventry{2022}{Undergraduate Course}{Data Analysis and Digital Tools}{Département Informatique et technologie de l'information}{INSA Rouen, France}{}
+\tldatecventry{2021}{Undergraduate Course}{Data Analysis and Digital Tools}{Département Informatique et technologie de l'information}{INSA Rouen, France}{}
+\bigskip
+\tldatecventry{2021}{Lab Assistant}{Soyez Acteurs du Web!}{Département Informatique et technologie de l'information}{INSA Rouen, France}{}
+\tldatecventry{2019}{Teaching Assistant}{Probability \& Statistics}{Department of Electrical \& Electronics Engineering}{UTP, Malaysia}{}
+
+\bigskip
+
+\section{Languages}
+\cvlanguage{Urdu}{Native}{}
+\medskip
+\cvlanguage{English}{Fluent}{IELTS (Band 8.0)}
+\medskip
+\cvlanguage{French}{Basic}{Good Understanding, Medium Speaking}
+\medskip
+
+\section{Skills}
+\cvitemwithcomment{Frameworks and Languages}{Python, TensorFlow, OpenCV, MATLAB, C\#, Visual Basic, HTML, CSS}{}
+\medskip
+\cvitemwithcomment{3D Modelling and Rendering}{PTC Creo, Sketchup, Blender}
+\medskip
+\cvitemwithcomment{Design and Illustration}{Adobe Photoshop, Affinity Designer, Figma, Corel Draw}{}
+\medskip
+\cvitemwithcomment{Misc}{Git, \LaTeX, WordPress, 3D Printing}{}
+\bigskip
+
+\section{Achievements}
+\tlcventry{2019}{2020}{Graduate Assistant Scholarship}{\newline Universiti Teknologi PETRONAS}{Malaysia}{}{}
+\medskip
+\tlcventry{2016}{2017}{Graduate Assistant Scholarship}{\newline Universiti Teknologi PETRONAS}{Malaysia}{}{}
+\medskip
+\tlcventry{2016}{2017}{1st round favourite}{\newline Robot Launch 2014 (Global robotics startup competition)}{RoboHub.org}{}{}
+\medskip
+\tldatecventry{2011}{Winner "Intel More to the Core™ Challenge"}{\newline Intel™}{ Pakistan}{}{}
+\medskip
+\tldatecventry{2010}{Winner "CPU IQ Blogger Challenge, South Asian region"}{\newline Intel™}{ Pakistan}{}{}
+\medskip
+\tldatecventry{2009}{Member Technical Evaluation \& Judges panel}{\newline "RoboSprint 2010"}{ Air University, Islamabad}{}{}
+\medskip
+\tldatecventry{2003}{Winner "Best Idea Award"}{\newline "1st National Fire Fighting Robot Competition (FFRC)"}{ College of EME, NUST, Pakistan }{}{}
+\medskip
+
+\section{Extra Curricular/Pro-Bono}
+\tlcventry{2020}{0}{Administrator}{}{ r\textbackslash ComputerVision subreddit and Computer Vision discord server}{}{}
+\bigskip
+\tlcventry{2010}{2011}{Guest writer (Hardware reviewer)}{wccftech.com}{}{}{}
+\bigskip
+\tlcventry{2007}{2012}{Lead Server Administrator}{Micronet Broadband Ltd.}{Islamabad}{Pakistan}{}
+\bigskip
+
+% \section{Event Organization}
+
+% \tldatecventry{2015}{$1^{st}$ Python Boot Camp}{IAG-USP}{São Paulo}{Brazil}{Member of the Local Organizing Committee and the Scientific Organizing Committee \\ For more information, please access the website:\\  \url{http://www.astro.iag.usp.br/~pythonbootcamp}.}
+
+% \bigskip
+
+% \tlcventry{2013}{0}{Journal Club}{IAG-USP}{S\~ao Paulo}{Brazil}{Journal Club is an initiative focused on sharing new and interesting publications and important information among graduate students and post-doctoral fellows - although, all members of the department are welcome to participate, whether as lecturers or as audience.
+% \\
+% \textbf{The main goals of Journal Club are:}
+% \begin{itemize}
+% \item To provide a friendly environment in which everyone can improve their presentation skills;
+% \item To spread the newest and most important publications in all fields of Astrophysics and correlated areas among the target audience, in order to keep everyone updated in terms of research;
+% \item To share important information and guidance about general issues regarding academia (e.g. "How to prepare for a talk?", "How to write a paper", etc.).
+% \end{itemize}
+% \medskip
+% For more information, please access our website:\\ \url{http://www.astro.iag.usp.br/~journalclub/}}
+
+% \bigskip
+
+\section{Courses \& Certificates}
+\tldatecventry{2020}{\emph{Francais Langue Etrangere}}{}{\newline INSA Rouen, Normandie}{France}{}
+\bigskip
+\tldatecventry{2019}{\emph{Deep Learning for Computer Vision with Python}}{}{\newline Pyimagesearch.com}{ }{}
+\bigskip
+\tldatecventry{2017}{\emph{Practical Python and OpenCV}}{}{\newline Pyimagesearch.com}{ }{}
+\bigskip
+\tldatecventry{2016}{\emph{Robotic Vision}}{}{\newline Queens University of Technology (MOOC)}{}{}
+\bigskip
+\tldatecventry{2012}{\emph{Advanced Digital Image Processing}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
+\bigskip
+\tldatecventry{2011}{\emph{Computer Vision}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
+\bigskip
+\tldatecventry{2010}{\emph{Nonlinear Control Systems}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
+\bigskip
+\tldatecventry{2010}{\emph{Robust Control System}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
+\bigskip
+\tldatecventry{2010}{\emph{Pattern Recognition}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
+\bigskip
+
+% \section{Invited Talks}
+% \tlcventry{2016}{Is the cluster environment quenching the Seyfert activity in elliptical and spiral galaxies?}{Extragalactic Group Seminar}{IAG-USP}{S\~ao Paulo, Brazil}{}
+% \medskip
+
+% \tldatecventry{2015}{Astrostatistics: An Arising Field in Astrophysics}{Journal Club}{IAG-USP}{S\~ao Paulo, Brazil}{}
+
+% \medskip
+
+% \tldatecventry{2013}{An Empirical Connection Between the UV Color of Early Type Galaxies and the Stellar Initial Mass Function}{Journal Club}{IAG-USP}{S\~ao Paulo, Brazil}{}
+
+\section{References}
+
+\begin{cvcolumns}
+    \cvcolumn{Fabrice Mériaudeau}{Professor, \\ ICMUB Institute of Molecular Chemistry of the University of Burgundy (ICMUB) \\ University de Bourgogne, France \\ \emailsymbol fabrice.meriaudeau@u-bourgogne.fr \\ \phonesymbol  +33 3 85 73 10 96}
+    \cvcolumn{Samia Ainouz}{Professor, \\  Laboratoire d’Informatique,
+du Traitement de l’Information et des Systèmes (LITIS) Lab\\ INSA Rouen Normandie, France \\ \emailsymbol samia.ainouz@insa-rouen.fr \\ \phonesymbol  +33 2 32 95 66 27}
+\end{cvcolumns}
+
+
+\clearpage
+
+
+\end{document}
