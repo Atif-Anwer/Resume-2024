@@ -15,10 +15,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.85]{geometry}    % Width of the entire CV
 \setlength{\hintscolumnwidth}{4.1cm} % Width of the timeline on your left
-\usepackage{pdfpages/pdfpages}
-\usepackage{moderntimeline/moderntimeline}
+\usepackage{pdfpages}
+\usepackage{moderntimeline}
+\usepackage{ifxetex}
 \usepackage{xpatch/xpatch}
 \usepackage{color, graphicx}
+
 \tlmaxdates{2001}{2024}              % Beggining and start of your timeline
 
 \newcommand{\cvreferencecolumn}[2]{%
@@ -65,13 +67,10 @@
 \title{\emph{Postdoctoral Researcher in Computer Vision}}
 \address{Le Creusot, 71200 France}{}
 \phone[mobile]{+33~(6)~6011~2563}
-% \phone[fixed]{+55~(11)~3091~2722}
 \email{atif.anwer@u-bourgogne.fr}                % optional, remove / comment the line if not wanted
 \homepage{atif-anwer.github.io}    % optional, remove / comment the line if not wanted
-%\social[linkedin]{https://br.linkedin.com/in/maria-luiza-linhares-dantas-56408033}  % optional, remove / comment the line if not wanted
-% \social[twitter]{mdastro}  % optional, remove / comment the line if not wanted
 \social[github]{Atif-Anwer}   % optional, remove / comment the line if not wanted
-% \extrainfo{\emailsymbol \emaillink{mdantas.astro@gmail.com}}
+\social[linkedin]{atifanwer}  % optional, remove / comment the line if not wanted
 % \quote{Dubitando ad veritatem parvenimus - \emph{Cicerone}}
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 
@@ -79,7 +78,6 @@
 \begin{document}
 
 \makecvtitle
-
 \section{Educational Background}
 
 \bigskip
@@ -95,42 +93,6 @@
 \tlcventry{2001}{2004}{B.E. Mechatronics}{\newline Major: Robotics, Control Systems and Image processing, \newline National University of Sciences \& Technology (NUST), Pakistan}{}{\newline \emph{Supervisor}: Dr. Saeed Ur Rahman}{\emph{Thesis}: Development and control of Bipedal Autonomous Robot (BART)}
 
 \bigskip
-
-% \section{Theses}
-
-% \medskip
-
-% \subsection{\textbf{PhD Thesis}}
-
-% \cvitem{\emph{ }}{Specular Highlight Detection and Adversarial Generation of Specularity-Free Images using Multi-Domain Translation Network Trained with Polarimetric Data}
-% % \cvitem{\emph{ADVISORS}}{Prof Samia Ainouz, Prof Fabrice Meriaudeau, Asst. Prof. Naufal B Saad}
-% % \cvitem{\textbf{FUNDING AGENGY}}{ ICUB project 2017 ANR program: ANR-17-CE22-0011}
-
-% \bigskip
-
-% \subsection{\textbf{MSc Thesis}}
-
-% \cvitem{\emph{TITLE}}{Real-time underwater 3D scene reconstruction using Kinect v2 time of flight camera}
-% % \cvitem{\emph{ADVISORS}}{Asst. Prof. Syed Saad Azhar Ali, Prof Fabrice Meriaudeau}
-
-% \bigskip
-
-% \subsection{\textbf{BE Thesis}}
-
-% \cvitem{\emph{TITLE}}{Development and control of Bipedal Autonomous Robot (BART)}
-% % \cvitem{\emph{ADVISOR}}{Prof Saeed Ur Rahman}
-
-% \bigskip
-
-% \section{Research Projects}
-% \medskip
-% \subsection{\textbf{Undergraduate Research Project}}
-
-% \tlcventry{2007}{2009}{The Study of the HII Region G331.5-0.2 in the Radio Contiuum Through the Stellar Population Using the 2MASS Catalog}{}{}{}{}
-
-% \cvitem{\textbf{ADVISOR}}{Professor Zulema Abraham}
-% \cvitem{\textbf{FUNDING AGENGY}}{Conselho Nacional de Desenvolvimento Científico e Tecnológico \newline (hereafter CNPq)}
-% \bigskip
 
 \section{Research Interests}
 
@@ -148,57 +110,59 @@
 \bibliographystyle{unsrt}
 \bibliography{publications}
 
-% \cvitem{\textbf{OTHERS}}{
-%     \begin{itemize}
-%     \item Astrostatistics
-%     \end{itemize}
-%     }
-
-
-% \section{Affiliations}
-% \subsection{Scientific}
-
 % \cvitem{\textbf{\footnotesize{BRAZIL}}}{Sociedade Astronômica Brasileira (hereafter \textbf{SAB}) \emph{(Brazilian Astronomical Society)} }
 
-% \cvitem{\textbf{\footnotesize{INTERNATIONAL ASSOCIATIONS}}}{International Astrostatistics Association (\textbf{IAA}), Cosmostatistics Initiative (\textbf{COIN}), Javalambre Physics of the Accelerating Universe (\textbf{J-PAS})}
-
-% \subsection{Other}
-% \cvitem{}{Overleaf Advisor (\url{https://www.overleaf.com/advisors})}
-% \cvitem{}{Zero Waste Bloggers Network, Inc. (non-profit organization) \newline (\url{http://zerowastebloggersnetwork.com})}
 \section{Professional Experience}
-\tlcventry{2022}{0}{Machine Learning R\&D Engineer}{Apeira Technologies}{Le Creusot, France}{}{Tasked with research and development of human post estimation and posture correction algorithms for improving cyclists’ performance.}
 \medskip
-\tlcventry{2022}{0}{Postdoctoral Researcher}{Université de Bourgogne}{Dijon, France}{}{Tasked with development of segmentation and classification techniques on OCT images for prediction of cardiovascular disease. \newline Development of software pipeline for end-to-end detection, segmentation, and analysis of Tunnelling Electron Microscopy (TEM) images of nanoparticles.}
+\tlcventry{2022}{0}{Machine Learning R\&D Engineer}{Apeira Technologies}{Le Creusot, France}{}{Research and development of deep learning algorithms for human pose estimation and posture correction, to improve cyclist performance in videos.}
+\medskip
+\tlcventry{2022}{0}{Postdoctoral Researcher}{Université de Bourgogne}{Dijon, France}{}{Research and development on estimating risk of cardiovascular disease from en-face OCT fundus images using deep learning. Additionally, development of software pipeline for end-to-end detection, segmentation, and analysis of Tunnelling Electron Microscopy (TEM) images of ZnO nanoparticles.}
 \medskip
 \tlcventry{2018}{2020}{Freelance 3D CAD \& Graphic Designer}{Freelancer.com}{}{}{Executed multiple 3D CAD modelling and graphic design projects from concept to prototype to completion.}
 \medskip
 \tlcventry{2015}{2016}{Co-Founder \& CTO}{Scifacterz}{Islamabad}{Pakistan}{Robotics Startup venture centred on design and  of “NBE (Non-Biological Entity)" an open-source, low cost, research platform and Home Service Robot}
 \medskip
 \tlcventry{2004}{2016}{Manager (Mechatronics)}{}{Islamabad}{Pakistan}{Multiple diverse industry roles involving concurrent responsibilities in Mechanical and Electronic Design research, and documentation.}
+\bigskip
 
-\bigskip
-\bigskip
-\bigskip
+\section{Select Recent Projects}
+\medskip
+\begin{cvcolumns}
+    % \setlength{\maincolumnwidth}{1.25\textwidth}
+    \cvcolumn{Cyclist pose estimation and posture correction (2023 \faLongArrowAltRight)}{Research and development of deep learning algorithms aimed at human pose estimation and posture correction, with a focus on enhancing cyclist performance in videos from hand-held devices. Solely responsible for refining MediaPipe accuracy by transfer-learning of graph-convolutional network (GCNs) and utilizing the improved pose estimates to generate accurate SMPL/SMPL-X meshes, facilitating diverse cyclist performance calculations.}
+    % \cvcolumn{ }{\photo[64pt][0.4pt]{images\logo.jpg}}
+\end{cvcolumns}
+\begin{cvcolumns}
+    % \setlength{\maincolumnwidth}{1.25\textwidth}
+    \cvcolumn{Estimating risk of cardio-vascular diseases from OCT-A images (2023 \faLongArrowAltRight)}{Comprehensive research and development project on estimating the risk of cardiovascular disease from en-face OCT fundus images. Employed a Convolutional Neural Network (CNN) architecture with EfficientNet v2 as the backbone. A journal publication of the research work has been submitted for peer-review.}
+    % \cvcolumn{ }{\photo[64pt][0.4pt]{images\logo.jpg}}
+\end{cvcolumns}
+\begin{cvcolumns}
+    % \setlength{\maincolumnwidth}{1.25\textwidth}
+    \cvcolumn{Automated analysis of TEM images of nano-particles (2023 \faLongArrowAltRight)}{Creation of a robust software pipeline for end-to-end detection, segmentation, and analysis of Tunnelling Electron Microscopy (TEM) images featuring ZnO nanoparticles. Solely responsible for implementing a custom-trained YOLO v8 network and developing a tailored Python user interface for seamless navigation and control of the entire end-to-end pipeline.}
+    % \cvcolumn{ }{\photo[64pt][0.4pt]{images\logo.jpg}}
+\end{cvcolumns}
+\begin{cvcolumns}
+    % \setlength{\maincolumnwidth}{1.25\textwidth}
+    \cvcolumn{SpecSeg (2021-2022)}{Conceived and developed a highly efficient Specular Segmentation (SpecSeg) network, structured on the U-net architecture that can detect pixels strongly affected by specular highlights with a high degree of precision. \\ (\href{https://github.com/Atif-Anwer/SpecSeg}{SpecSeg repository \faGithub}, \href{https://huggingface.co/spaces/atifanwerPK/SpecSeg}{Huggingface Demo \faLaptopCode})}
+    % \cvcolumn{ }{\photo[64pt][0.4pt]{images\logo.jpg}}
+\end{cvcolumns}
+\begin{cvcolumns}
+    % \setlength{\maincolumnwidth}{1.25\textwidth}
+    \cvcolumn{SHMGAN (2019-2022)}{\emph{PhD Research - }Development of a multi-input Generative Adversarial Network (GAN) designed to produce specular-free images from a single RGB input image, eliminating the need for external labels. Specular Highlights Mitigating GAN (SHMGAN) was trained using polarimetric images obtained under uncontrolled lighting conditions, and showcased adversarial network design within challenging real-world scenarios. \href{https://github.com/Atif-Anwer/SHMGAN}{(SHMGAN repository \faGithub})}
+    % \cvcolumn{ }{\photo[64pt][0.4pt]{images\logo.jpg}}
+\end{cvcolumns}
 
 \section{Teaching Experience}
 \medskip
 % \subsection{Teaching Assistant}
-\tldatecventry{2023}{Masters Course (M2 Health AI)}{Image Processing}{University de Bourgogne}{Département IEM (Informatique Electronique Mécanique)}{University de Bourgogne, France}
+\tldatecventry{2023}{Masters Course (MSc Health AI)}{Image Processing}{University de Bourgogne}{Département IEM (Informatique Electronique Mécanique)}{University de Bourgogne, France}
 \tldatecventry{2022}{Undergraduate Course}{Data Analysis and Digital Tools}{Département Informatique et technologie de l'information}{INSA Rouen, France}{}
 \tldatecventry{2021}{Undergraduate Course}{Data Analysis and Digital Tools}{Département Informatique et technologie de l'information}{INSA Rouen, France}{}
 \bigskip
 \tldatecventry{2021}{Lab Assistant}{Soyez Acteurs du Web!}{Département Informatique et technologie de l'information}{INSA Rouen, France}{}
 \tldatecventry{2019}{Teaching Assistant}{Probability \& Statistics}{Department of Electrical \& Electronics Engineering}{UTP, Malaysia}{}
-
 \bigskip
-
-\section{Languages}
-\cvlanguage{Urdu}{Native}{}
-\medskip
-\cvlanguage{English}{Fluent}{IELTS (Band 8.0)}
-\medskip
-\cvlanguage{French}{Basic}{Good Understanding, Medium Speaking}
-\medskip
 
 \section{Skills}
 \cvitemwithcomment{Frameworks and Languages}{Python, TensorFlow, OpenCV, MATLAB, C\#, Visual Basic, HTML, CSS}{}
@@ -226,6 +190,14 @@
 \tldatecventry{2003}{Winner "Best Idea Award"}{\newline "1st National Fire Fighting Robot Competition (FFRC)"}{ College of EME, NUST, Pakistan }{}{}
 \medskip
 
+\section{Languages}
+\cvlanguage{Urdu}{Native}{}
+\medskip
+\cvlanguage{English}{Fluent}{IELTS (Band 8.0)}
+\medskip
+\cvlanguage{French}{Basic}{Good Understanding, Medium Speaking}
+\medskip
+
 \section{Extra Curricular/Pro-Bono}
 \tlcventry{2020}{0}{Administrator}{}{ r\textbackslash ComputerVision subreddit and Computer Vision discord server}{}{}
 \bigskip
@@ -233,55 +205,20 @@
 \bigskip
 \tlcventry{2007}{2012}{Lead Server Administrator}{Micronet Broadband Ltd.}{Islamabad}{Pakistan}{}
 \bigskip
-
-% \section{Event Organization}
-
-% \tldatecventry{2015}{$1^{st}$ Python Boot Camp}{IAG-USP}{São Paulo}{Brazil}{Member of the Local Organizing Committee and the Scientific Organizing Committee \\ For more information, please access the website:\\  \url{http://www.astro.iag.usp.br/~pythonbootcamp}.}
-
-% \bigskip
-
-% \tlcventry{2013}{0}{Journal Club}{IAG-USP}{S\~ao Paulo}{Brazil}{Journal Club is an initiative focused on sharing new and interesting publications and important information among graduate students and post-doctoral fellows - although, all members of the department are welcome to participate, whether as lecturers or as audience.
-% \\
-% \textbf{The main goals of Journal Club are:}
-% \begin{itemize}
-% \item To provide a friendly environment in which everyone can improve their presentation skills;
-% \item To spread the newest and most important publications in all fields of Astrophysics and correlated areas among the target audience, in order to keep everyone updated in terms of research;
-% \item To share important information and guidance about general issues regarding academia (e.g. "How to prepare for a talk?", "How to write a paper", etc.).
-% \end{itemize}
-% \medskip
-% For more information, please access our website:\\ \url{http://www.astro.iag.usp.br/~journalclub/}}
-
-% \bigskip
+\bigskip
+\bigskip
+\bigskip
 
 \section{Courses \& Certificates}
-\tldatecventry{2020}{\emph{Francais Langue Etrangere}}{}{\newline INSA Rouen, Normandie}{France}{}
-\bigskip
-\tldatecventry{2019}{\emph{Deep Learning for Computer Vision with Python}}{}{\newline Pyimagesearch.com}{ }{}
-\bigskip
-\tldatecventry{2017}{\emph{Practical Python and OpenCV}}{}{\newline Pyimagesearch.com}{ }{}
-\bigskip
-\tldatecventry{2016}{\emph{Robotic Vision}}{}{\newline Queens University of Technology (MOOC)}{}{}
-\bigskip
-\tldatecventry{2012}{\emph{Advanced Digital Image Processing}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
-\bigskip
-\tldatecventry{2011}{\emph{Computer Vision}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
-\bigskip
-\tldatecventry{2010}{\emph{Nonlinear Control Systems}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
-\bigskip
-\tldatecventry{2010}{\emph{Robust Control System}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
-\bigskip
-\tldatecventry{2010}{\emph{Pattern Recognition}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
-\bigskip
-
-% \section{Invited Talks}
-% \tlcventry{2016}{Is the cluster environment quenching the Seyfert activity in elliptical and spiral galaxies?}{Extragalactic Group Seminar}{IAG-USP}{S\~ao Paulo, Brazil}{}
-% \medskip
-
-% \tldatecventry{2015}{Astrostatistics: An Arising Field in Astrophysics}{Journal Club}{IAG-USP}{S\~ao Paulo, Brazil}{}
-
-% \medskip
-
-% \tldatecventry{2013}{An Empirical Connection Between the UV Color of Early Type Galaxies and the Stellar Initial Mass Function}{Journal Club}{IAG-USP}{S\~ao Paulo, Brazil}{}
+\tldatecventry{2020}{\emph{Francais Langue Etrangere}}{}{\newline INSA Rouen, Normandie}{France}{}\bigskip
+\tldatecventry{2019}{\emph{Deep Learning for Computer Vision with Python}}{}{\newline Pyimagesearch.com}{ }{}\bigskip
+\tldatecventry{2017}{\emph{Practical Python and OpenCV}}{}{\newline Pyimagesearch.com}{ }{}\bigskip
+\tldatecventry{2016}{\emph{Robotic Vision}}{}{\newline Queens University of Technology (MOOC)}{}{}\bigskip
+\tldatecventry{2012}{\emph{Advanced Digital Image Processing}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}\bigskip
+\tldatecventry{2011}{\emph{Computer Vision}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}\bigskip
+\tldatecventry{2010}{\emph{Nonlinear Control Systems}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}\bigskip
+\tldatecventry{2010}{\emph{Robust Control System}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}\bigskip
+\tldatecventry{2010}{\emph{Pattern Recognition}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}\bigskip
 
 \section{References}
 
