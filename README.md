@@ -1,5 +1,5 @@
 # Resume:
-[Download the PDF Resume here](main.pdf)
+[Download the PDF Resume here](https://github.com/Atif-Anwer/Resume-2024/blob/main/Resume-Atif%20Anwer.pdf)
 
 # Explore my Github:
 Since youre here, you might want to further explore my github repos :)
