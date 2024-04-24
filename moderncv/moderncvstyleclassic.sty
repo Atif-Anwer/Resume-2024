@@ -174,6 +174,13 @@
   \end{tabular}%
   \par\addvspace{#1}}
 
+\renewcommand*{\cventrylogo}[3][.25em]{%
+  % \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+  %   \raggedleft\hintstyle{#2} &{#3}%
+  % \end{tabular}%
+  \begin{minipage}[t]{\linewidth}\small#9\end{minipage}}
+  \par\addvspace{#1}
+
 \renewcommand*{\cvdoubleitem}[5][.25em]{%
  \cvitem[#1]{#2}{%
    \begin{minipage}[t]{\doubleitemmaincolumnwidth}#3\end{minipage}%
@@ -213,6 +220,18 @@
     \begin{minipage}[t]{\cvitemwithcommentmainlength}\bfseries#3\end{minipage}%
     \hfill% fill of \separatorcolumnwidth
     \begin{minipage}[t]{\cvitemwithcommentcommentlength}\raggedleft\small\itshape#4\end{minipage}}}
+
+\renewcommand*{\cventrylogo}[9][.25em]{% 
+\cvitem[#1]{#2}{% 
+  {\bfseries#3}% 
+  \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% 
+  \ifthenelse{\equal{#5}{}}{}{, #5}% 
+  \ifthenelse{\equal{#6}{}}{}{, #6.}% 
+  \ifthenelse{\equal{#7}{}}{}{% 
+    \ifthenelse{\equal{#8}{}}{}{\hfill \raisebox{-0.5\height}{\includegraphics[width=#8]{#7}}}}%
+  \strut% 
+  \ifx&#9&% 
+    \else{\newline{}\begin{minipage}[t]{\linewidth}\small#9\end{minipage}}\fi} }
 
 \renewenvironment{thebibliography}[1]%
   {%

@@ -1,18 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Author: Maria Luiza Linhares Dantas
-%
-% This is an example of a very complete CV using the 'moderncv' package
-% and the 'timeline' package. For more information on those, please
-% access:
-% https://www.ctan.org/tex-archive/macros/latex/contrib/moderntimeline
-% https://www.ctan.org/tex-archive/macros/latex/contrib/moderncv
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[11pt, a4paper, sans, final]{moderncv}
 % \usepackage[dvipsnames]{xcolor}
 \moderncvstyle{classic}
 \moderncvcolor{blue}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage[scale=0.85]{geometry}    % Width of the entire CV
 \setlength{\hintscolumnwidth}{4.1cm} % Width of the timeline on your left
 \usepackage{pdfpages}
@@ -22,114 +13,161 @@
 \usepackage{color, graphicx}
 
 \tlmaxdates{2001}{2024}              % Beggining and start of your timeline
-
-\newcommand{\cvreferencecolumn}[2]{%
-  \cvitem[0.8em]{}{%
-    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
-    \hfill%
-    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
-    }%
-}
-
-\newcommand{\cvreference}[8]{%
-    \textbf{#1}\newline% Name
-    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
-    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
-    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
-    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
-    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{\href{mailto:#6}{\nolinkurl{#6}}}\newline}%
-    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7\newline}
-    \ifthenelse{\equal{#8}{}}{}{\mobilephonesymbol~#8}}
-
-% List of journals that I may need to use in the bibtex file
-\def\aj{AJ}
-\def\araa{ARA\&A}
-\def\apj{ApJ}
-\def\apjl{ApJ}
-\def\apjs{ApJS}
-\def\apss{Ap\&SS}
-\def\aap{A\&A}
-\def\aapr{A\&A~Rev.}
-\def\aaps{A\&AS}
-\def\mnras{MNRAS}
-\def\pasp{PASP}
-\def\pasj{PASJ}
-\def\qjras{QJRAS}
-\def\nat{Nature}
-\def\aplett{Astrophys.~Lett.}
-\def\aas{AAS}
-\def\solphys{Solar Physics}
-\def\memsai{Mem.~Soc.~Astron.~Italiana}
-
-
-% Personal Information
+%----------------------------------------------------------------------------------
+%            Personal data
+%----------------------------------------------------------------------------------    
 \name{Atif ANWER}{}
-\title{\emph{Postdoctoral Researcher in Computer Vision}}
+\title{\emph{Postdoctoral Researcher in Computer Vision and \newline Deep Learning applications}}
 \address{Le Creusot, 71200 France}{}
-\phone[mobile]{+33~(6)~6011~2563}
+\phone[mobile]{+33~66~011~2563}
 \email{atif.anwer@u-bourgogne.fr}                % optional, remove / comment the line if not wanted
 \homepage{atif-anwer.github.io}    % optional, remove / comment the line if not wanted
 \social[github]{Atif-Anwer}   % optional, remove / comment the line if not wanted
 \social[linkedin]{atifanwer}  % optional, remove / comment the line if not wanted
-% \quote{Dubitando ad veritatem parvenimus - \emph{Cicerone}}
-\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
-
+% \social[orcid]{Atif-Anwer}{0000-0002-5412-3263}
 
 \begin{document}
 
+%----------------------------------------------------------------------------------
+%            JOB DETAILS (FOR COVER LETTER)
+%----------------------------------------------------------------------------------  
+\newcommand{\jobTitle}{REPLACE-ME }
+\newcommand{\companyName}{REPLACE-ME }
+
+%----------------------------------------------------------------------------------
+%            COVER LETTER
+%----------------------------------------------------------------------------------
+{\Huge Cover Letter \par}    % add a text before header
+\recipient{\companyName}{Street address\\Zip Code City}  % -> EDIT %
+\opening{Dear Sir/Madam,}
+\closing{ \bigskip Yours faithfully,}
+% \enclosure{enclosures}
+\makelettertitle                       % print title / header
+% -------- INTRODUCTION, GREETINGS, Position and Company --------------
+I am writing to express my strong interest in the \jobTitle position at \companyName,  % <- EDIT %
+as advertised.
+With a Ph.D. in Computer Vision, 14 years of pre-PhD industrial experience, and two years of hands-on post-PhD experience in pose estimation and deep learning, I am excited about the opportunity to apply the skills and knowledge gained to significantly contribute to your team's success.
+
+% ---------- education, Experience, TECHNICAL SKILLS, ACHIEVEMENTS -------------
+During my doctoral studies at INSA Rouen, France, my research focused on a generative AI application project, funded by INRIA and Peugeot, and was a pivotal milestone in my career. 
+Currently, I am working in a split contract as a Machine Learning engineer at Apeira Technologies, France, and simultaneously as a post-doc at University de Bourgogne, France involving close collaboration with subject matter experts.
+
+At Apeira Technologies, my responsibilities are to refine the accuracy of existing pose estimation algorithms to generate accurate 2D skeletons for 3D SMPL meshes, facilitating various cyclist performance calculations.
+As a postdoctoral researcher at the University of Bourgogne, France, I am working on multiple projects in parallel as part of my research work. These include estimating the risk of cardiovascular disease from en-face OCT fundus images using deep learning, and development of an end-to-end software pipeline for detection, segmentation, and analysis of tunneling electron microscopy (TEM) images of nanoparticles.  
+
+% ------ Fit and Motivation: COMPANY FIT, CONTRIBUTION (SKILL ALIGNMENT) ----------
+My proficiency extends beyond theoretical research encompassing the building of unsupervised and semi-supervised ML/DL systems. I have a proven track record of translating complex concepts into tangible solutions. In addition, I am highly motivated, proficient in communication and adept at managing time. I am highly adaptable and thrive in dynamic environments where collaboration and creativity are encouraged. I am excited to apply my abilities to initiatives that promote innovative and cutting-edge AI technologies. Additionally, I look forward to the opportunity to engage with experts and mentors in the field as it aligns perfectly with my career goals of moving from academia back to industrial applications of computer vision and deep learning.
+ 
+I am certain that my robust analytical abilities, communication prowess, and time management capabilities, coupled with my proficiency in collaborating within multidisciplinary teams, will empower me to significantly contribute to projects and promote a culture of innovation and excellence. My resume provides a more detailed account of my qualifications. 
+
+Thank you for considering my application. I hope to have the opportunity to discuss how I can contribute to the continued success of \companyName.
+
+\makeletterclosing
+
+%----------------------------------------------------------------------------------
+%            RESUME
+%----------------------------------------------------------------------------------
+
+\newpage
 \makecvtitle
 \section{Educational Background}
-
-\bigskip
+\medskip
 
 \tlcventry{2019}{2022}{PhD Computer Sciences / Electrical \& Electronics Engineering \emph{(Dual-Degree)}}{\newline INSA Rouen Normandie, France \& University Teknologi PETRONAS, Malaysia}{\emph{Funded by}: Agence Nationale de la Recherche (ANR) project ICUB}{\newline \emph{Supervisors}: Prof. Samia Ainouz (INSA), Asst. Prof. Naufal Bin Saad (UTP)}{\emph{Thesis}: Specular Highlight Detection and Adversarial Generation of Specularity-Free Images using Multi-Domain Translation Network Trained with Polarimetric Data}
 
-\bigskip
+\medskip
 
 \tlcventry{2016}{2017}{MSc Electrical \& Electronics Engineering}{\newline University Teknologi PETRONAS, Perak Malaysia}{}{\newline \emph{Supervisor}: Asst. Prof. Syed Saad Azhar Ali}{\emph{Thesis}: Real-time underwater 3D scene reconstruction using Kinect v2 time of flight camera}
 
-\bigskip
+\medskip
 
 \tlcventry{2001}{2004}{B.E. Mechatronics}{\newline Major: Robotics, Control Systems and Image processing, \newline National University of Sciences \& Technology (NUST), Pakistan}{}{\newline \emph{Supervisor}: Dr. Saeed Ur Rahman}{\emph{Thesis}: Development and control of Bipedal Autonomous Robot (BART)}
 
 \bigskip
 
 \section{Research Interests}
-
+\medskip
 \cvitem{\textbf{\footnotesize{ }}}{
     \begin{itemize}
     \item 3D Human Pose Estimation applications
+    \medskip
     \item Generative AI applications
+    \medskip
     \item 3D Sensing and Robotic Perception
+    \medskip
     \item Semantic Segmentation and Scene Understanding
+    \medskip
     \item Mobile Robot design and development
     \end{itemize}
     }
 
-\nocite{*}
-\bibliographystyle{unsrt}
-\bibliography{publications}
-
-% \cvitem{\textbf{\footnotesize{BRAZIL}}}{Sociedade Astronômica Brasileira (hereafter \textbf{SAB}) \emph{(Brazilian Astronomical Society)} }
+\section{
+% \includegraphics[width=0.10\textwidth]{images/signify.png}
+Relevance to the Applied Position }
+% \section{ Relevance to the Applied Position }
+\medskip
+    \cvitem{\textbf{\footnotesize{ }}}{
+    \begin{itemize}
+    \item  Experienced in researching and developing diverse unsupervised and semi-supervised ML/DL systems, addressing both traditional and unconventional computer vision challenges.
+    \medskip
+    \item Ability to multitask effectively and deliver deep learning projects within demanding timelines.
+    \medskip
+    \item  Strong communication, time-management and collaborative skills, and managerial experience facilitating integration with teams.
+    \medskip
+    \item Extensive understanding and expertise in mechatronic systems, hardware integration and data acquisition.
+    \end{itemize}
+    }
+\newpage
 
 \section{Professional Experience}
 \medskip
-\tlcventry{2022}{0}{Machine Learning R\&D Engineer}{Apeira Technologies}{Le Creusot, France}{}{Research and development of deep learning algorithms for human pose estimation and posture correction, to improve cyclist performance in videos.}
+\tlcventry{2022}{0}{Machine Learning R\&D Engineer}{Apeira Technologies}{Le Creusot, France}{\includegraphics[width=0.05\textwidth]{images/apeira.jpg}}{Research and development of deep learning algorithms for human pose estimation and posture correction, to improve cyclist performance in videos.}
 \medskip
-\tlcventry{2022}{0}{Postdoctoral Researcher}{Université de Bourgogne}{Dijon, France}{}{Research and development on estimating risk of cardiovascular disease from en-face OCT fundus images using deep learning. Additionally, development of software pipeline for end-to-end detection, segmentation, and analysis of Tunnelling Electron Microscopy (TEM) images of ZnO nanoparticles.}
+\tlcventry{2022}{0}{Postdoctoral Researcher}{Université de Bourgogne}{Dijon, France}{\includegraphics[width=0.05\textwidth]{images/logo.jpg} }{Research and development on estimating risk of cardiovascular disease from en-face OCT fundus images using deep learning. Additionally, development of software pipeline for end-to-end detection, segmentation, and analysis of Tunnelling Electron Microscopy (TEM) images of ZnO nanoparticles.}
 \medskip
 \tlcventry{2018}{2020}{Freelance 3D CAD \& Graphic Designer}{Freelancer.com}{}{}{Executed multiple 3D CAD modelling and graphic design projects from concept to prototype to completion.}
 \medskip
 \tlcventry{2015}{2016}{Co-Founder \& CTO}{Scifacterz}{Islamabad}{Pakistan}{Robotics Startup venture centred on design and  of “NBE (Non-Biological Entity)" an open-source, low cost, research platform and Home Service Robot}
 \medskip
-\tlcventry{2004}{2016}{Manager (Mechatronics)}{}{Islamabad}{Pakistan}{Multiple diverse industry roles involving concurrent responsibilities in Mechanical and Electronic Design research, and documentation.}
+\tlcventry{2004}{2016}{Manager (Mechatronics)}{}{Islamabad}{Pakistan}{Multiple diverse industry roles involving concurrent responsibilities in Mechanical and Electronic Design research, and managerial positions.}
+\bigskip
+
+\section{Skills}
+\bigskip
+\cvitemwithcomment{Frameworks, Languages \& Tools}{\parbox{0.7\textwidth}{Python, TensorFlow, OpenCV, MATLAB, C\#, Visual Basic,  YOLO (v4, v8), Rerun, Gradio}}{}
+\medskip
+\cvitemwithcomment{3D Modelling and Rendering}{PTC Creo, Sketchup, Blender}
+\medskip
+\cvitemwithcomment{Design and Illustration}{Adobe Photoshop, Affinity Designer, Figma, Corel Draw}{}
+\medskip
+\cvitemwithcomment{Misc}{Git, \LaTeX, Notion, WordPress, 3D Printing}{}
+\bigskip
+
+\section{Languages}
+\bigskip
+\cvlanguage{Urdu}{Native}{}
+\medskip
+\cvlanguage{English}{Fluent}{IELTS (Band 8.0)}
+\medskip
+\cvlanguage{French}{Medium}{Good Understanding, Medium Speaking}
+\medskip
+\bigskip
+
+\section{Extra Curricular/Pro-Bono}
+\bigskip
+\tlcventry{2020}{0}{Administrator}{}{ r\textbackslash ComputerVision subreddit and discord server}{}{}
+% \bigskip
+\tlcventry{2010}{2011}{Guest writer (Hardware reviewer)}{wccftech.com}{}{}{}
+% \bigskip
+\tlcventry{2007}{2012}{Lead Server Administrator}{Micronet Broadband Ltd.}{Islamabad}{Pakistan}{}
+\bigskip
 \bigskip
 
 \section{Select Recent Projects}
 \medskip
 \begin{cvcolumns}
     % \setlength{\maincolumnwidth}{1.25\textwidth}
-    \cvcolumn{Cyclist pose estimation and posture correction (2023 \faLongArrowAltRight)}{Research and development of deep learning algorithms aimed at human pose estimation and posture correction, with a focus on enhancing cyclist performance in videos from hand-held devices. Solely responsible for refining MediaPipe accuracy by transfer-learning of graph-convolutional network (GCNs) and utilizing the improved pose estimates to generate accurate SMPL/SMPL-X meshes, facilitating diverse cyclist performance calculations.}
+    \cvcolumn{Cyclist pose estimation and posture correction (2023 \faLongArrowAltRight)}{Research and development of deep learning algorithms aimed at human pose estimation and posture correction, with a focus on enhancing cyclist performance in videos from hand-held devices. Solely responsible for refining MediaPipe accuracy by transfer-learning of graph-convolutional network (GCN) and utilizing the improved pose estimates to generate accurate SMPL/SMPL-X meshes, facilitating various cycling performance calculations.}
     % \cvcolumn{ }{\photo[64pt][0.4pt]{images\logo.jpg}}
 \end{cvcolumns}
 \begin{cvcolumns}
@@ -139,7 +177,7 @@
 \end{cvcolumns}
 \begin{cvcolumns}
     % \setlength{\maincolumnwidth}{1.25\textwidth}
-    \cvcolumn{Automated analysis of TEM images of nano-particles (2023 \faLongArrowAltRight)}{Creation of a robust software pipeline for end-to-end detection, segmentation, and analysis of Tunnelling Electron Microscopy (TEM) images featuring ZnO nanoparticles. Solely responsible for implementing a custom-trained YOLO v8 network and developing a tailored Python user interface for seamless navigation and control of the entire end-to-end pipeline.}
+    \cvcolumn{Automated analysis of TEM images of nano-particles (2023 \faLongArrowAltRight)}{Creation of a robust software pipeline for end-to-end detection, segmentation, and analysis of Tunnelling Electron Microscopy (TEM) images featuring ZnO nanoparticles. Solely responsible for implementing a custom-trained YOLO v8 network and developing a customized Python user interface for seamless navigation and control of the entire end-to-end pipeline.}
     % \cvcolumn{ }{\photo[64pt][0.4pt]{images\logo.jpg}}
 \end{cvcolumns}
 \begin{cvcolumns}
@@ -149,7 +187,7 @@
 \end{cvcolumns}
 \begin{cvcolumns}
     % \setlength{\maincolumnwidth}{1.25\textwidth}
-    \cvcolumn{SHMGAN (2019-2022)}{\emph{PhD Research - }Development of a multi-input Generative Adversarial Network (GAN) designed to produce specular-free images from a single RGB input image, eliminating the need for external labels. Specular Highlights Mitigating GAN (SHMGAN) was trained using polarimetric images obtained under uncontrolled lighting conditions, and showcased adversarial network design within challenging real-world scenarios. \href{https://github.com/Atif-Anwer/SHMGAN}{(SHMGAN repository \faGithub})}
+    \cvcolumn{SHMGAN (2019-2022)}{\emph{PhD Research - }Development of a multi-input Generative Adversarial Network (GAN) designed to produce specular-free images from a single RGB input image, eliminating the need for external labels. Specular Highlights Mitigating GAN (SHMGAN) was trained using polarimetric images obtained under uncontrolled lighting conditions and showcased adversarial network design within challenging real-world scenarios. \href{https://github.com/Atif-Anwer/SHMGAN}{(SHMGAN repository \faGithub})}
     % \cvcolumn{ }{\photo[64pt][0.4pt]{images\logo.jpg}}
 \end{cvcolumns}
 
@@ -159,73 +197,55 @@
 \tldatecventry{2023}{Masters Course (MSc Health AI)}{Image Processing}{University de Bourgogne}{Département IEM (Informatique Electronique Mécanique)}{University de Bourgogne, France}
 \tldatecventry{2022}{Undergraduate Course}{Data Analysis and Digital Tools}{Département Informatique et technologie de l'information}{INSA Rouen, France}{}
 \tldatecventry{2021}{Undergraduate Course}{Data Analysis and Digital Tools}{Département Informatique et technologie de l'information}{INSA Rouen, France}{}
-\bigskip
+% \bigskip
 \tldatecventry{2021}{Lab Assistant}{Soyez Acteurs du Web!}{Département Informatique et technologie de l'information}{INSA Rouen, France}{}
 \tldatecventry{2019}{Teaching Assistant}{Probability \& Statistics}{Department of Electrical \& Electronics Engineering}{UTP, Malaysia}{}
 \bigskip
 
-\section{Skills}
-\cvitemwithcomment{Frameworks, Languages \& Tools}{\parbox{0.7\textwidth}{Python, TensorFlow, OpenCV, MATLAB, C\#, Visual Basic, HTML, CSS,  YOLO (v4, v8), Rerun, Gradio}}{}
-\medskip
-\cvitemwithcomment{3D Modelling and Rendering}{PTC Creo, Sketchup, Blender}
-\medskip
-\cvitemwithcomment{Design and Illustration}{Adobe Photoshop, Affinity Designer, Figma, Corel Draw}{}
-\medskip
-\cvitemwithcomment{Misc}{Git, \LaTeX, Notion, WordPress, 3D Printing}{}
-\bigskip
+
+\newpage 
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{publications}
+
+\newpage 
 
 \section{Achievements}
+\bigskip
 \tlcventry{2019}{2020}{Graduate Assistant Scholarship}{\newline Universiti Teknologi PETRONAS}{Malaysia}{}{}
-\medskip
+% \medskip
 \tlcventry{2016}{2017}{Graduate Assistant Scholarship}{\newline Universiti Teknologi PETRONAS}{Malaysia}{}{}
-\medskip
+% \medskip
 \tlcventry{2016}{2017}{1st round favourite}{\newline Robot Launch 2014 (Global robotics startup competition)}{RoboHub.org}{}{}
-\medskip
+% \medskip
 \tldatecventry{2011}{Winner "Intel More to the Core™ Challenge"}{\newline Intel™}{ Pakistan}{}{}
-\medskip
+% \medskip
 \tldatecventry{2010}{Winner "CPU IQ Blogger Challenge, South Asian region"}{\newline Intel™}{ Pakistan}{}{}
-\medskip
+% \medskip
 \tldatecventry{2009}{Member Technical Evaluation \& Judges panel}{\newline "RoboSprint 2010"}{ Air University, Islamabad}{}{}
-\medskip
+% \medskip
 \tldatecventry{2003}{Winner "Best Idea Award"}{\newline "1st National Fire Fighting Robot Competition (FFRC)"}{ College of EME, NUST, Pakistan }{}{}
-\medskip
+% \medskip
 
-\section{Languages}
-\cvlanguage{Urdu}{Native}{}
-\medskip
-\cvlanguage{English}{Fluent}{IELTS (Band 8.0)}
-\medskip
-\cvlanguage{French}{Basic}{Good Understanding, Medium Speaking}
-\medskip
-
-\section{Extra Curricular/Pro-Bono}
-\tlcventry{2020}{0}{Administrator}{}{ r\textbackslash ComputerVision subreddit and Computer Vision discord server}{}{}
-\bigskip
-\tlcventry{2010}{2011}{Guest writer (Hardware reviewer)}{wccftech.com}{}{}{}
-\bigskip
-\tlcventry{2007}{2012}{Lead Server Administrator}{Micronet Broadband Ltd.}{Islamabad}{Pakistan}{}
-\bigskip
-\bigskip
-\bigskip
-\bigskip
 
 \section{Courses \& Certificates}
-\tldatecventry{2020}{\emph{Francais Langue Etrangere}}{}{\newline INSA Rouen, Normandie}{France}{}\bigskip
-\tldatecventry{2019}{\emph{Deep Learning for Computer Vision with Python}}{}{\newline Pyimagesearch.com}{ }{}\bigskip
-\tldatecventry{2017}{\emph{Practical Python and OpenCV}}{}{\newline Pyimagesearch.com}{ }{}\bigskip
-\tldatecventry{2016}{\emph{Robotic Vision}}{}{\newline Queens University of Technology (MOOC)}{}{}\bigskip
-\tldatecventry{2012}{\emph{Advanced Digital Image Processing}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}\bigskip
-\tldatecventry{2011}{\emph{Computer Vision}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}\bigskip
-\tldatecventry{2010}{\emph{Nonlinear Control Systems}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}\bigskip
-\tldatecventry{2010}{\emph{Robust Control System}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}\bigskip
-\tldatecventry{2010}{\emph{Pattern Recognition}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}\bigskip
+\bigskip
+\tldatecventry{2020}{\emph{Francais Langue Etrangere}}{}{\newline INSA Rouen, Normandie}{France}{}
+\tldatecventry{2019}{\emph{Deep Learning for Computer Vision with Python}}{}{\newline Pyimagesearch.com}{ }{}
+\tldatecventry{2017}{\emph{Practical Python and OpenCV}}{}{\newline Pyimagesearch.com}{ }{}
+\tldatecventry{2016}{\emph{Robotic Vision}}{}{\newline Queens University of Technology (MOOC)}{}{}
+\tldatecventry{2012}{\emph{Advanced Digital Image Processing}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
+\tldatecventry{2011}{\emph{Computer Vision}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
+\tldatecventry{2010}{\emph{Nonlinear Control Systems}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
+\tldatecventry{2010}{\emph{Robust Control System}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
+\tldatecventry{2010}{\emph{Pattern Recognition}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
 
 \section{References}
-
+\bigskip
 \begin{cvcolumns}
     \cvcolumn{Fabrice Mériaudeau}{Professor, \\ ICMUB Institute of Molecular Chemistry of the University of Burgundy (ICMUB) \\ University de Bourgogne, France \\ \emailsymbol fabrice.meriaudeau@u-bourgogne.fr \\ \phonesymbol  +33 3 85 73 10 96}
     \cvcolumn{Samia Ainouz}{Professor, \\  Laboratoire d’Informatique,
-du Traitement de l’Information et des Systèmes (LITIS) Lab\\ INSA Rouen Normandie, France \\ \emailsymbol samia.ainouz@insa-rouen.fr \\ \phonesymbol  +33 2 32 95 66 27}
+du Traitement de l’Information et des Systèmes (LITIS) Lab, INSA Rouen, France \\ \emailsymbol samia.ainouz@insa-rouen.fr \\ \phonesymbol  +33 2 32 95 66 27}
 \end{cvcolumns}
 
 
