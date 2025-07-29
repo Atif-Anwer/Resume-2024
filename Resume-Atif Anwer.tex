@@ -14,6 +14,13 @@
 \usepackage{color, graphicx}
 \usepackage{xcolor}
 \usepackage{footmisc}
+\usepackage{xstring}
+\DeclareRobustCommand{\bcolor}[2][color1]{%
+  {\bfseries
+    \textcolor{#1}{\StrLeft{#2}{3}}% First 3 characters in color
+    \textcolor{black}{\StrGobbleLeft{#2}{3}}% Remaining in black
+  }%
+}
 \tlmaxdates{2001}{2026}              % Beginning and start of your timeline
 %----------------------------------------------------------------------------------
 %            Personal data
@@ -68,7 +75,7 @@
 
 \newpage
 \makecvtitle
-\section{Educational Background}
+\section{\bcolor[magenta]{Education}}%bicolor section with custom color
 \medskip
 
 \tlcventry{2019}{2022}{PhD Computer Sciences / Electrical \& Electronics Engineering \emph{(Dual-Degree)}}{\newline INSA Rouen Normandie, France \& University Teknologi PETRONAS, Malaysia}{\emph{Funded by}: Agence Nationale de la Recherche (ANR) project ICUB}{\newline \emph{Supervisors}: Prof. Samia Ainouz (INSA), Asst. Prof. Naufal Bin Saad (UTP)}{\emph{Thesis}: Specular Highlight Detection and Adversarial Generation of Specularity-Free Images using Multi-Domain Translation Network Trained with Polarimetric Data}
@@ -82,8 +89,8 @@
 \tlcventry{2001}{2004}{B.E. Mechatronics}{\newline Major: Robotics, Control Systems and Image processing, \newline National University of Sciences \& Technology (NUST), Pakistan}{}{\newline \emph{Supervisor}: Dr. Saeed Ur Rahman}{\emph{Thesis}: Development and control of Bipedal Autonomous Robot (BART)}
 
 \bigskip
+\section{\bcolor[orange]{Interests}}%bicolor section with custom color
 
-\section{Research Interests}
 \medskip
 \cvitem{\textbf{\footnotesize{ }}}{
     \begin{itemize}
@@ -99,7 +106,7 @@
 
 \section{
 % \includegraphics[width=0.04\textwidth]{images/spotify.jpeg} 
-Technical and Professional Skills}
+\bcolor[cyan]{Technical \& Professional Highlights}}
 \medskip
 \cvitem{}{
 \begin{itemize}
@@ -118,7 +125,7 @@ Technical and Professional Skills}
 }
 \newpage
 
-\section{Professional Experience}
+\section{\bcolor[teal]{Experience}}
 \medskip
 \tlcventry{2022}{0}{Postdoctoral Researcher}{Université Bourgogne Europe}{Dijon, France}{\includegraphics[width=0.05\textwidth]{images/logo.jpg} }{Research and development of software pipeline and Web Application for end-to-end detection, segmentation, and analysis of Tunnelling Electron Microscopy (TEM) images of Cu, Ni and ZnO nanoparticles. Additionally, development on estimating risk of cardiovascular disease from en-face OCT fundus images using deep learning.}
 \medskip
@@ -131,7 +138,7 @@ Technical and Professional Skills}
 \tlcventry{2004}{2016}{Manager (Mechatronics)}{}{Islamabad}{Pakistan}{Multiple diverse industry roles involving concurrent responsibilities in Mechanical and Electronic Design research, and managerial positions.}
 \bigskip
 
-\section{Skills}
+\section{\bcolor[purple]{Skills}}
 \medskip
 \cvitemwithcomment{Programming \& Frameworks}{\parbox{0.75\textwidth}{Python, TensorFlow, OpenCV, MATLAB, C\#, Visual Basic, OpenAI API (LLMs), Mediapipe, Rerun, Gradio, React, TypeScript, Electron}}{}
 \medskip
@@ -142,7 +149,7 @@ Technical and Professional Skills}
 \cvitemwithcomment{Tools \& Platforms}{Git, \LaTeX, Notion, WordPress, 3D Printing}{}
 \bigskip
 
-\section{Languages}
+\section{\bcolor[blue]{Languages}}
 \medskip
 \cvlanguage{Urdu}{Native}{}
 \medskip
@@ -152,7 +159,7 @@ Technical and Professional Skills}
 \medskip
 \bigskip
 
-\section{Extra Curricular/Pro-Bono}
+\section{\bcolor{Extra Curricular/Pro-Bono}}
 \bigskip
 \tlcventry{2020}{0}{Administrator}{}{ r\textbackslash ComputerVision subreddit and discord server}{}{}
 % \bigskip
@@ -162,7 +169,7 @@ Technical and Professional Skills}
 \bigskip
 \bigskip
 
-\section{Select Recent Projects}
+\section{\bcolor[magenta]{Projects}}
 % \medskip
 \begin{cvcolumns}
     % \setlength{\maincolumnwidth}{1.25\textwidth}
@@ -190,7 +197,7 @@ Technical and Professional Skills}
     % \cvcolumn{ }{\photo[64pt][0.4pt]{images\logo.jpg}}
 \end{cvcolumns}
 
-\section{Teaching Experience}
+\section{\bcolor[cyan]{Teaching}}
 % \medskip
 % \subsection{Teaching Assistant}
 \tlcventry{2025}{0}{Masters Course (MS Health AI M2)}{\textbf{Image Processing}}{Département IEM (Informatique Electronique Mécanique)}{University de Bourgogne, France}{}
@@ -204,14 +211,17 @@ Technical and Professional Skills}
 \bigskip
 
 
-\newpage 
+\newpage
+\begingroup
+\renewcommand{\refname}{\bcolor[magenta]{Publications}} % <-- Custom heading here
 \nocite{*}
 \bibliographystyle{unsrt}
 \let\thefootnote\relax\footnotetext{\textit{IF: Clarivate Web Of Science Impact Factor}}
 \bibliography{publications}
-\newpage 
+\endgroup
+\newpage
 
-\section{Achievements}
+\section{\bcolor[magenta]{Achievements}}
 \bigskip
 \tlcventry{2019}{2020}{Graduate Assistant Scholarship}{\newline Universiti Teknologi PETRONAS}{Malaysia}{}{}
 % \medskip
@@ -241,13 +251,13 @@ Technical and Professional Skills}
 % \tldatecventry{2010}{\emph{Robust Control System}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
 % \tldatecventry{2010}{\emph{Pattern Recognition}}{}{\newline Muhammad Ali Jinnah University}{Pakistan}{}
 
-\section{Recent Internship Co-supervision}
+\section{\bcolor[orange]{Internship Co-supervision}}
 \bigskip
 \tlcventry{2025}{0}{\emph{Augmented Reality in Mandibular Tumor Surgery}}{\newline Development of a real-time AR system for mandibular tumor surgery by overlaying CT 3D reconstructions onto endoscopic video, using feature extraction, tracking and homography chaining for accurate image registration.}{\newline University Bourgogne Europe, Dijon}{France}{}
 \tldatecventry{2024}{\emph{Fully automated detection of nanoparticles in TEM images}}{\newline Detection of Zn, CuO and Ni nanoparticles in Transmission Electron Microscopy (TEM) images using YOLO and generation of 2D size plots based on the NP dimensions}{\newline University Bourgogne Europe, Dijon}{ }{}
 
 
-\section{References}
+\section{\bcolor[teal]{References}}
 \bigskip
 \begin{cvcolumns}
     \cvcolumn{Fabrice Mériaudeau}{Professor, \\ ICMUB Institute of Molecular Chemistry of the University of Burgundy (ICMUB) \\ University de Bourgogne, France \\ \emailsymbol fabrice.meriaudeau@u-bourgogne.fr \\ \phonesymbol  +33 3 85 73 10 96}
